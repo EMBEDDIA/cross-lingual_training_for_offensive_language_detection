@@ -1,0 +1,74 @@
+import subprocess
+
+
+def run():
+    subprocess.call(["python", "incremental_learning.py",
+                     "--train_data_path", "../data/croatian/cro_train.tsv",
+                    "--test_data_path", "../data/croatian/cro_internal_test.tsv",
+                     "--eval_data_path", "../data/croatian/cro_val.tsv",
+                     "--output_dir", "../models/shebert_croatian1",
+                     "--data_column", "text_a",
+                     "--label_column", "label",
+                     "--tokenizer_file", "..models/shebert_en_finetune/vocab.txt",
+                     "--config_file", "..models/shebert_en_finetune/config.json",
+                     "--model_file", "pytorch_model.bin",
+                     "--random_seed", "42"])
+    subprocess.call(["python", "incremental_learning.py",
+                     "--train_data_path", "../data/slovenian/slo_train.tsv",
+                    "--test_data_path", "../data/slovenian/slo_internal_test.tsv",
+                     "--eval_data_path", "../data/slovenian/slo_val.tsv",
+                     "--output_dir", "../models/shebert_slovenian1",
+                     "--data_column", "data",
+                     "--label_column", "label",
+                     "--tokenizer_file", "..models/shebert_en_finetune/vocab.txt",
+                     "--config_file", "..models/shebert_en_finetune/config.json",
+                     "--model_file", "pytorch_model.bin",
+                     "--random_seed", "42"])
+    subprocess.call(["python", "incremental_learning.py",
+                     "--train_data_path", "../data/croatian/cro_train.tsv",
+                    "--test_data_path", "../data/croatian/cro_internal_test.tsv",
+                     "--eval_data_path", "../data/croatian/cro_val.tsv",
+                     "--output_dir", "../models/shebert_croatian2",
+                     "--data_column", "text_a",
+                     "--label_column", "label",
+                     "--tokenizer_file", "..models/shebert_en_finetune/vocab.txt",
+                     "--config_file", "..models/shebert_en_finetune/config.json",
+                     "--model_file", "pytorch_model.bin",
+                     "--random_seed", "84"])
+    subprocess.call(["python", "incremental_learning.py",
+                     "--train_data_path", "../data/slovenian/slo_train.tsv",
+                    "--test_data_path", "../data/slovenian/slo_internal_test.tsv",
+                     "--eval_data_path", "../data/slovenian/slo_val.tsv",
+                     "--output_dir", "../models/shebert_slovenian2",
+                     "--data_column", "data",
+                     "--label_column", "label",
+                     "--tokenizer_file", "..models/shebert_en_finetune/vocab.txt",
+                     "--config_file", "..models/shebert_en_finetune/config.json",
+                     "--model_file", "pytorch_model.bin",
+                     "--random_seed", "84"])
+    subprocess.call(["python", "incremental_learning.py",
+                     "--train_data_path", "../data/croatian/cro_train.tsv",
+                    "--test_data_path", "../data/croatian/cro_internal_test.tsv",
+                     "--eval_data_path", "../data/croatian/cro_val.tsv",
+                     "--output_dir", "../models/shebert_croatian3",
+                     "--data_column", "text_a",
+                     "--label_column", "label",
+                     "--tokenizer_file", "..models/shebert_en_finetune/vocab.txt",
+                     "--config_file", "..models/shebert_en_finetune/config.json",
+                     "--model_file", "pytorch_model.bin",
+                     "--random_seed", "126"])
+    subprocess.call(["python", "incremental_learning.py",
+                     "--train_data_path", "../data/slovenian/slo_train.tsv",
+                    "--test_data_path", "../data/slovenian/slo_internal_test.tsv",
+                     "--eval_data_path", "../data/slovenian/slo_val.tsv",
+                     "--output_dir", "../models/shebert_slovenian3",
+                     "--data_column", "data",
+                     "--label_column", "label",
+                     "--tokenizer_file", "..models/shebert_en_finetune/vocab.txt",
+                     "--config_file", "..models/shebert_en_finetune/config.json",
+                     "--model_file", "pytorch_model.bin",
+                     "--random_seed", "126"])
+
+
+if __name__ == "__main__":
+    run()

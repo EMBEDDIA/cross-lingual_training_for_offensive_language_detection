@@ -1,0 +1,1 @@
+This repository contains the code that was used to produce results for the paper Investigating cross-lingual training for offensive language detection. The repository is currently in a clean-up phase in order to make the code easier to use and make the experiments easier to reproduce.
